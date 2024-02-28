@@ -61,6 +61,14 @@ import {
   HiX,
 } from "react-icons/hi";
 
+import profileImg from '@/images/profile-picture-5.jpg';
+import faviconPng from '@/images/favicon.png';
+import cardImage from '@/images/image-1.jpg';
+import carouselImage1 from '@/images/carousel-1.svg';
+import carouselImage2 from '@/images/carousel-2.svg';
+import carouselImage3 from '@/images/carousel-3.svg';
+
+
 export const HomePageContent: NextPage = function () {
   return (
     <div className="p-6">
@@ -404,7 +412,7 @@ const AlertsExample: FC = function () {
 };
 
 const AvatarExample: FC = function () {
-  return <Avatar bordered img="/profile-picture-5.jpg" rounded />;
+  return <Avatar bordered img={profileImg.src} rounded />;
 };
 
 const BadgesExample: FC = function () {
@@ -499,7 +507,7 @@ const CardExample: FC = function () {
     <div className="max-w-sm">
       <Card
         imgAlt="Meaningful alt text for an image that is not purely decorative"
-        imgSrc="/image-1.jpg"
+        imgSrc={cardImage.src}
       >
         <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
           Noteworthy technology acquisitions 2021
@@ -518,11 +526,11 @@ const CarouselExample: FC = function () {
     <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
       <Carousel>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img alt="" src="/carousel-1.svg" />
+        <img alt="" src={carouselImage1.src} />
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img alt="" src="/carousel-2.svg" />
+        <img alt="" src={carouselImage2.src} />
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img alt="" src="/carousel-3.svg" />
+        <img alt="" src={carouselImage3.src} />
       </Carousel>
     </div>
   );
@@ -583,7 +591,7 @@ const FooterExample: FC = function () {
           <div>
             <Footer.Brand
               href="https://flowbite.com"
-              src="/favicon.png"
+              src={faviconPng.src}
               alt="Flowbite Logo"
               name="Flowbite"
             />
