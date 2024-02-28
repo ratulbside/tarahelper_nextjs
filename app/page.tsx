@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main className="bg-gray-50 dark:bg-gray-900">
       <div className="flex flex-col items-center justify-center px-6 pt-8 mx-auto md:h-screen pt:mt-0 dark:bg-gray-900">
-        <a href="http://localhost:1313/" className="flex items-center justify-center mb-8 text-2xl font-semibold lg:mb-10 dark:text-white">
+        <a href="/" className="flex items-center justify-center mb-8 text-2xl font-semibold lg:mb-10 dark:text-white">
           <Image
             className="mr-4 h-11"
             src="/next.svg"
@@ -27,7 +27,7 @@ export default function Home() {
           action={async (formData: FormData) => {
             'use server';
             await signIn('credentials', {
-              redirectTo: '/protected',
+              redirectTo: '/amdin',
               email: formData.get('email') as string,
               password: formData.get('password') as string,
             });
