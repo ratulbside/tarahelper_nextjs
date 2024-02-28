@@ -1,5 +1,3 @@
-import { Badge } from 'reactstrap';
-
 export function removeTextAndConvertToNumber(text: string): number | null {
     // Remove all characters except numbers, ".", "+" or "-".
     const numberString: string = text.replace(/[^0-9\-+\.]/g, "");
@@ -15,23 +13,6 @@ export function removeTextAndConvertToNumber(text: string): number | null {
 
 export function arrayToString(array: any[]): string {
     return array ? array.join(', ') : '';
-}
-
-/**
- * Formats an error or warning message with the specified level and message.
- *
- * @param {string} level - The level of the message, either 'error' or 'warning'
- * @param {string} message - The content of the message
- * @return {JSX.Element} The formatted error or warning message
- */
-export function formatErrorOrWarningMessage(level: string, message: string): JSX.Element {
-    return (
-        <span>
-            <Badge color={(level === 'error' ? 'danger' : 'warning')}>
-                {(level === 'error' ? 'Error' : 'Warning')}
-            </Badge> {' ' + message}
-        </span>
-    );
 }
 
 /**
