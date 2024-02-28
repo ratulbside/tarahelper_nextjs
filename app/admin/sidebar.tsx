@@ -28,11 +28,11 @@ export const DashboardSidebar: FC = function () {
         >
             <Sidebar.Items>
                 <Sidebar.ItemGroup>
-                    <Sidebar.Item href="#" icon={HiChartPie}>
+                    <Sidebar.Item href="/admin" icon={HiChartPie}>
                         Dashboard
                     </Sidebar.Item>
-                    <Sidebar.Item href="#" icon={HiViewBoards}>
-                        Kanban
+                    <Sidebar.Item href="/admin/BooksExtract" icon={HiViewBoards}>
+                        Books
                     </Sidebar.Item>
                     <Sidebar.Item href="#" icon={HiInbox}>
                         Inbox
