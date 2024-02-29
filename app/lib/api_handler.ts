@@ -18,3 +18,11 @@ export async function getBookDataFromOpenLibraryAPI(isbn: string) {
 
     return response.json;
 }
+
+export function getBooksFromJson() {
+    return fetch('/data/books.json')
+        .then((response) => response.json())
+        .then((data) => {
+            return data.data;
+        });
+}

@@ -12,12 +12,18 @@ export const authConfig = {
     authorized({ auth, request: { nextUrl } }) {
       let isLoggedIn = !!auth?.user;
       let isOnDashboard = nextUrl.pathname.startsWith('/admin');
+      let isData = nextUrl.pathname.startsWith('/data');
 
       if (isOnDashboard) {
         if (isLoggedIn) return true;
         return false; // Redirect unauthenticated users to login page
-      } else if (isLoggedIn) {
-        return Response.redirect(new URL('/admin', nextUrl));
+      } 
+      // else if (isLoggedIn) {
+      //   return Response.redirect(new URL('/admin', nextUrl));
+      // }
+
+      if(isData && !isLoggedIn){
+          return Response.redirect(new URL('/', nextUrl));
       }
 
       return true;

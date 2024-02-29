@@ -24,6 +24,7 @@
     ],
     "paths": {
       "@/images/*": ["public/images/*"],
+      "@/data/*": ["public/data/*"],
       "@/*": ["./*"]
     }
   },

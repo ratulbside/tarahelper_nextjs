@@ -32,10 +32,10 @@ export const DashboardSidebar: FC = function () {
                         Dashboard
                     </Sidebar.Item>
                     <Sidebar.Item href="/admin/BooksExtract" icon={HiViewBoards}>
-                        Books
+                        Books Data Fetch
                     </Sidebar.Item>
-                    <Sidebar.Item href="#" icon={HiInbox}>
-                        Inbox
+                    <Sidebar.Item href="/admin/BooksDataModify" icon={HiInbox}>
+                        Books Modify
                     </Sidebar.Item>
                     <Sidebar.Item href="#" icon={HiUser}>
                         Users
