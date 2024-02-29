@@ -13,9 +13,6 @@ export const authConfig = {
       let isLoggedIn = !!auth?.user;
       let isOnDashboard = nextUrl.pathname.startsWith('/admin');
 
-      console.log('isOnDashboard: ', isOnDashboard);
-      console.log('isLoggedIn: ', isLoggedIn);
-
       if (isOnDashboard) {
         if (isLoggedIn) return true;
         return false; // Redirect unauthenticated users to login page
