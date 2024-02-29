@@ -14,6 +14,11 @@ import { Dialog } from 'primereact/dialog';
 import { InputText } from 'primereact/inputtext';
 import {getBooksFromJson} from '@/app/lib/api_handler';
 
+import 'primereact/resources/themes/saga-blue/theme.css';
+import 'primereact/resources/primereact.min.css';
+import 'primeicons/primeicons.css';
+// import 'primeflex/primeflex.css';
+
 export default function BookModify() {
     let emptyProduct = {
         id: null,
